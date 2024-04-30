@@ -1,0 +1,67 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set full height for the container */
+  .container {
+    height: 100vh;
+  }
+  
+  /* Center the content vertically and horizontally */
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Style the card */
+  .card {
+    width: 300px;
+  }
+  
+  /* Add some padding to the card body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Style the form inputs and button */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Style the forgot password link */
+  .card-footer {
+    margin-top: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .card {
+      width: 100%;
+    }
+  }
+  .text-center h2 {
+    display: flex;
+   
+    align-items: center;
+}

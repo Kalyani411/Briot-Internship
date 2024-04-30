@@ -1,0 +1,43 @@
+<div class="container vh-100">
+    <div class="row justify-content-center h-100">
+        <div class="card my-auto shadow">
+            <div class="card-body px-5">
+
+                <div class="text-center">
+                    <h2>Add User</h2>
+                </div>
+
+                <form [formGroup]="formcontrol">
+                    <div class="form-group">
+                        <input type="Employee Id" id="EmployeeId" placeholder="Employee Id" class="form-control"
+                            formControlName="EmployeeId" name="EmployeeId" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="username" id="username" placeholder="username" class="form-control"
+                            formControlName="username" name="username" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-control"
+                            formControlName="password" name="password" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="Role" id="Role" placeholder="Role" class="form-control" formControlName="Role"
+                            name="Role" />
+                    </div>
+                    <div class="form-group">
+                        <input type="Site" id="Site" placeholder="Site" class="form-control" formControlName="Site"
+                            name="Site" />
+                    </div>
+                    <div class="row justify-content-between">
+                        <button mat-raised-button color="primary" mat-dialog-close>Add</button>
+                        <button  mat-dialog-close mat-raised-button style="margin-left: 10px;" color="primary" (click)="formcontrol" >Cancel</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

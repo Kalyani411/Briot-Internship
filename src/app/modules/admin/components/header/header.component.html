@@ -1,0 +1,110 @@
+   <mat-toolbar color="primary">
+  
+        <button (click)="drawer.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon >menu</mat-icon>
+        </button>
+
+        
+        <span>Raw Material Warehouse Management System</span>
+        <span class="example-spacer"></span>
+    
+                <button class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./home">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                      
+                      </a>
+                </button>
+
+                <button class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./contact">
+                        <mat-icon>perm_identity</mat-icon>
+                    </a>
+                </button>
+                <button class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./about">
+                       <!--  <mat-icon aria-hidden="false" aria-label="perm_identity" fontIcon="contact"></mat-icon> -->
+                       <mat-icon>settings</mat-icon>
+                    </a>
+                </button>
+                
+               <!--  <button class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./services">Services</a>
+                </button> -->
+               
+                <button class=" btn-primary nav-item text-white" role="button">
+                    <a class="nav-link text-white"  (click)="logout()">
+                        <mat-icon>power_settings_new</mat-icon>
+                    </a>
+                </button>
+           
+<!-- (click)="logout()" -->
+</mat-toolbar>
+
+
+<mat-drawer-container>
+    <mat-drawer #drawer opened="false" mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>print</mat-icon>Material Inward & Label Printing </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>assignment_turned_in</mat-icon>QC</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>shopping_cart</mat-icon>Material Putaway</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>list</mat-icon>Picklists</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Picking Master </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Stock Transfer</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>swap_horizontal_circle</mat-icon>Material </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>check_circle_outline</mat-icon>Audit </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>shopping_cart</mat-icon>RePrint Barcodes</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button [mat-menu-trigger-for]="lvl1master" mat-button>
+                  <mat-icon>grid_on</mat-icon>Masters
+                </button>
+                <mat-menu #lvl1master="matMenu">
+                  <button  mat-menu-item>Role Details</button>
+                  <button  mat-menu-item>User Details</button>
+                  <button  mat-menu-item>UOM Details</button>
+                  <button  mat-menu-item>Part Numbers Details</button>
+                  <button  mat-menu-item>Location Details</button>
+                 
+                  <button  mat-menu-item>Project Details</button>
+                </mat-menu>
+              </mat-list-item>
+              <!--  <mat-menu #LocationDetails="matMenu">
+                  <button mat-menu-item>tax</button>
+                  <button mat-menu-item>taxp</button>
+                </mat-menu> -->
+              
+            <mat-list-item>
+                <button mat-button><mat-icon>grid_on</mat-icon>Reports</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>help_outline</mat-icon>Help</button>
+            </mat-list-item>
+        </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center;">
+        <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

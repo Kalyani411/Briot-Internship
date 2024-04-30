@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  
+  .demo-table {
+    width: 100%;
+  }
+  
+  .demo-button-container {
+    padding-bottom: 16px;
+  }
+  
+  .demo-button + .demo-button {
+    margin-left: 8px;
+  }
+
+  .header-container {
+    position: relative;
+  }
+  
+  .add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+   
+    height: 12%;
+  }
+
+
+  .raw {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .nav-link {
+    margin-right: 20px; /* Add some spacing between the link and heading */
+  }
+  
+  

@@ -1,0 +1,19 @@
+<form >
+  <mat-form-field>
+    <mat-label class="required">Username</mat-label>
+    <input matInput>
+  </mat-form-field><br/>
+
+  <mat-form-field>
+    <mat-label class="required">Role</mat-label>
+    <mat-select >
+      <mat-option value="one">Role 11</mat-option>
+      <mat-option value="two">Role 12</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div class="row justify-content-between">
+  <button mat-raised-button color="primary" mat-dialog-close (click)="onConfirmClick()">UPDATE</button>
+  <a mat-dialog-close mat-raised-button style="margin-left: 10px;" (click)="onCancelClick()">CANCEL</a>
+</div>
